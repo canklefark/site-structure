@@ -1,0 +1,13 @@
+/** Utilities  */
+
+.border-green {border: var(--bw-5) solid var(--green);}
+.border-red {border: var(--bw-5) solid var(--red);}
+.border-blue {border: var(--bw-5) solid var(--blue);}
+.border-purple {border: var(--bw-5) solid var(--purple);}
+
+.bg-green{background: var(--green);}
+.bg-red{background: var(--red);}
+.bg-blue{background: var(--blue);}
+.bg-purple{background: var(--purple);}
+
+.full-width {width: 100%}
