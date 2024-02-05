@@ -1,80 +1,38 @@
 @import './reset.css';
+@import './tokens.css';
 @import './utilities.css';
-
-:root {
-  --bw-5: 5px;
-
-  --green: green;
-  --red: red;
-  --blue: blue;
-  --purple: purple;
-  --white: white;
-}
-
-/*
-  I realize this isn't exactly like the video, especially with the styling at the element level 
-  but I've been experimenting with Andy Bell's Cube CSS methodology lately. I do use BEM with WordPress but
-  with the rise of Tailwind and utility focused CSS, I wanted to try something else for coding.
-
-  I'm not sure if this is 100% correct but I really tried to consider the cascade to maximize inheritance.
-*/
-
-.page {
-  position: relative;
-
-  /* Normally, I'd throw this in my reset */
-  min-height: 100vh;
-}
-
-.page > * {
-  min-height: 6.25rem;
-}
+@import './layout.css';
+@import './typography.css';
 
 [data-type='labelled']::before {
   content: '';
   display: inline-block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--fs-100);
   text-transform: uppercase;
-  color: var(--white);
-  padding: 0.5rem;
-}
-
-header {
-  position: relative;
+  color: hsl(var(--white));
+  padding: 0.5em;
+  z-index: -9999;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header[data-type='labelled']::before {
   content: 'header';
-  background: var(--blue);
-}
-
-nav {
-  position: absolute;
-  min-height: 25px;
-  bottom: 0;
+  background: hsl(var(--blue) / 0.25);
 }
 
 nav[data-type='labelled']::before {
   content: 'navigation';
-  background: var(--purple);
-}
-
-main {
-  min-height: 300px;
+  background: hsl(var(--purple) / 0.25);
 }
 
 main[data-type='labelled']::before {
   content: 'content';
-  background: var(--red);
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
+  background: hsl(var(--red) / 0.25);
 }
 
 footer[data-type='labelled']::before {
   content: 'footer';
-  background: var(--green);
+  background: hsl(var(--green) / 0.25);
 }

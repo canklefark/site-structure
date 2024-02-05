@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+}
+
+.page > * {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.page,
+.page > *,
+nav {
+  position: relative;
+}
+
+section {
+  padding-block: var(--section-pad-block);
+}
