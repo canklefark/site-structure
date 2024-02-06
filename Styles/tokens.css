@@ -1,9 +1,20 @@
 :root {
   font-family: 'Press Start 2P', system-ui;
+  /* MISC */
+  --transparency: 0.15;
+
+  /** Sizes */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
 
   /** Layout */
   --section-pad-block: clamp(5rem, 10vh, 6rem);
-  --padding-base: 1rem;
 
   /** Border */
   --bw: 5px;
@@ -15,13 +26,14 @@
   --blue: 240 100% 50%;
   --purple: 300 100% 25%;
   --white: 0 0% 100%;
+  --black: 0 0% 0%;
 
   /** Tyopography */
-  --fs-100: clamp(0.88rem, 0.21vw + 0.83rem, 1rem);
-  --fs-400: clamp(1.09rem, 0.4vw + 1.01rem, 1.33rem);
-  --fs-500: clamp(1.37rem, 0.68vw + 1.23rem, 1.78rem);
-  --fs-600: clamp(1.71rem, 1.1vw + 1.49rem, 2.37rem);
-  --fs-700: clamp(2.14rem, 1.7vw + 1.8rem, 3.16rem);
-  --fs-800: clamp(2.67rem, 2.56vw + 2.16rem, 4.21rem);
-  --fs-900: clamp(3.34rem, 3.79vw + 2.58rem, 5.61rem);
+  --fs-100: clamp(0.75rem, 0.21vw + 0.71rem, 0.88rem);
+  --fs-400: clamp(0.94rem, 0.38vw + 0.86rem, 1.17rem);
+  --fs-500: clamp(1.17rem, 0.64vw + 1.04rem, 1.55rem);
+  --fs-600: clamp(1.46rem, 1.01vw + 1.26rem, 2.07rem);
+  --fs-700: clamp(1.83rem, 1.55vw + 1.52rem, 2.76rem);
+  --fs-800: clamp(2.29rem, 2.32vw + 1.82rem, 3.68rem);
+  --fs-900: clamp(2.86rem, 3.41vw + 2.18rem, 4.91rem);
 }

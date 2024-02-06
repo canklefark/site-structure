@@ -3,6 +3,7 @@
 @import './utilities.css';
 @import './layout.css';
 @import './typography.css';
+@import './pixel-art.css';
 
 [data-type='labelled']::before {
   content: '';
@@ -19,20 +20,25 @@
 
 header[data-type='labelled']::before {
   content: 'header';
-  background: hsl(var(--blue) / 0.25);
+  background: hsl(var(--blue) / 0.15);
 }
 
 nav[data-type='labelled']::before {
   content: 'navigation';
-  background: hsl(var(--purple) / 0.25);
+  background: hsl(var(--purple) / 0.15);
 }
 
 main[data-type='labelled']::before {
   content: 'content';
-  background: hsl(var(--red) / 0.25);
+  background: hsl(var(--red) / 0.15);
 }
 
 footer[data-type='labelled']::before {
   content: 'footer';
-  background: hsl(var(--green) / 0.25);
+  background: hsl(var(--green) / 0.15);
+}
+
+.footer-logo {
+  height: auto;
+  width: 4em;
 }

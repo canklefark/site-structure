@@ -1,18 +1,27 @@
 body {
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
 }
 
-.page > * {
-  max-width: 80rem;
+body > * {
+  --max-width: 80rem;
+  --padding: calc(var(--size-7) * 2);
+
+  width: min(100% - var(--padding), var(--max-width));
   margin-inline: auto;
 }
 
-.page,
-.page > *,
+body > *,
 nav {
   position: relative;
 }
 
 section {
   padding-block: var(--section-pad-block);
+}
+
+footer {
+  min-height: 30vh;
+  padding-block: var(--size-8);
 }

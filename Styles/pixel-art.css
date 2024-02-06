@@ -1,0 +1,8 @@
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(50px, 1fr));
+  grid-template-rows: repeat(11, minmax(50px, 1fr));
+  max-width: 60%;
+  aspect-ratio: 1;
+  margin: auto;
+}
