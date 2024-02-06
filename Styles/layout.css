@@ -1,6 +1,11 @@
 body {
   min-height: 100vh;
   display: grid;
+  /*
+    I saw this in some of Kevin Powell's stuff and thought it was a cool way to do a basic header, main, footer layout
+    but he had 1fr for the header and footer. I found that if you have enough content in the main, your header and footer 
+    can get huge so I did max-content to restrict them to being only as big as the content needs. 
+  */
   grid-template-rows: max-content auto max-content;
 }
 
