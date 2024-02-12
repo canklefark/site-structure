@@ -15,6 +15,7 @@
 .border-red { border: var(--border) hsl(var(--red) / var(--transparency)); }
 .border-blue { border: var(--border) hsl(var(--blue) / var(--transparency)); }
 .border-purple { border: var(--border) hsl(var(--purple) / var(--transparency)); }
+.border-black { border: var(--border) hsl(var(--black)); }
 
 /** Background Colors */
 .bg-green { background-color: hsl(var(--green)); }

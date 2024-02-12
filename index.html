@@ -15,16 +15,7 @@
   <body>
     <header class="border-blue" id="home" data-type="labelled">
       <div class="container flex space-between align-center h-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="100"
-          height="100"
-          viewBox="0 0 64 64">
-          <path
-            d="M 10 5 C 9.448 5 9 5.448 9 6 L 9 8 L 7 8 C 6.448 8 6 8.448 6 9 L 6 55 C 6 55.552 6.448 56 7 56 L 9 56 L 9 58 C 9 58.552 9.448 59 10 59 L 54 59 C 54.552 59 55 58.552 55 58 L 55 56 L 57 56 C 57.552 56 58 55.552 58 55 L 58 9 C 58 8.448 57.552 8 57 8 L 55 8 L 55 6 C 55 5.448 54.552 5 54 5 L 10 5 z M 11 7 L 14 7 L 14 10 L 50 10 L 50 7 L 53 7 L 53 10 L 56 10 L 56 13 L 53 13 L 53 45 L 50 45 L 50 48 L 14 48 L 14 45 L 11 45 L 11 13 L 8 13 L 8 10 L 11 10 L 11 7 z M 11 10 L 11 13 L 14 13 L 14 10 L 11 10 z M 53 13 L 53 10 L 50 10 L 50 13 L 53 13 z M 22 19 L 22 34 L 25 34 L 25 19 L 22 19 z M 39 19 L 39 34 L 42 34 L 42 19 L 39 19 z M 8 51 L 11 51 L 11 54 L 14 54 L 14 57 L 11 57 L 11 54 L 8 54 L 8 51 z M 53 51 L 56 51 L 56 54 L 53 54 L 53 57 L 50 57 L 50 54 L 53 54 L 53 51 z"></path>
-        </svg>
+        <img class="logo" src="./assets/icons/logo.svg" alt="" />
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
           <span class="visually-hidden">Menu</span>
         </button>
@@ -34,14 +25,15 @@
           data-type="labelled"
           data-visable="false">
           <a href="#home">Home</a>
-          <a href="#content">Content</a>
+          <a href="#content">Style</a>
           <a href="#grid">Grid</a>
+          <a href="#gallery">Gallery</a>
           <a href="#footer">Footer</a>
         </nav>
       </div>
     </header>
     <main class="border-red" data-type="labelled">
-      <section class="container">
+      <section class="container" id="content">
         <div class="flow">
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
@@ -54,7 +46,7 @@
         </div>
       </section>
 
-      <section class="bg-light-gray">
+      <section class="bg-light-gray" id="grid">
         <div class="pixel-grid | container">
           <div class="bg-black" style="grid-area: 1 / 3 / 1 / 10"></div>
           <div class="bg-black" style="grid-area: 2 / 2 / 2 / 4"></div>
@@ -84,15 +76,34 @@
         </div>
       </section>
 
-      <section>
-        <img
-          src="https://placehold.co/1600x400"
-          alt=""
-          srcset="
-            https://placehold.co/400x100   400w,
-            https://placehold.co/800x200   800w,
-            https://placehold.co/1600x400 1600w
-          " />
+      <section id="gallery">
+        <div class="flex flex-column" style="--gap: 5rem">
+          <div class="container">
+            <picture>
+              <source media="(max-width: 480px)" srcset="assets/images/carnival-480.jpg" />
+              <source
+                media="(max-width: 480px)"
+                type="image/webp"
+                srcset="./assets/images/carnival-480.webp" />
+              <source type="image/webp" srcset="./assets/images/carnival-1280.webp" />
+              <img
+                class="border-black"
+                src="./assets/images/carnival-1280.jpg"
+                alt="A painting of an 8-bit loading screen on a public wall" />
+            </picture>
+          </div>
+          <img
+            src="https://placehold.co/1600x400"
+            alt=""
+            srcset="
+              https://placehold.co/400x100   400w,
+              https://placehold.co/800x200   800w,
+              https://placehold.co/1300x300 1300w,
+              https://placehold.co/1600x400 1600w,
+              https://placehold.co/2000x600 1920w
+            "
+            sizes="100vw" />
+        </div>
       </section>
     </main>
     <footer
@@ -101,17 +112,7 @@
       id="footer"
       data-type="labelled">
       <div class="flex flex-column" style="max-width: 30%">
-        <svg
-          class="footer-logo"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="100"
-          height="100"
-          viewBox="0 0 64 64">
-          <path
-            d="M 10 5 C 9.448 5 9 5.448 9 6 L 9 8 L 7 8 C 6.448 8 6 8.448 6 9 L 6 55 C 6 55.552 6.448 56 7 56 L 9 56 L 9 58 C 9 58.552 9.448 59 10 59 L 54 59 C 54.552 59 55 58.552 55 58 L 55 56 L 57 56 C 57.552 56 58 55.552 58 55 L 58 9 C 58 8.448 57.552 8 57 8 L 55 8 L 55 6 C 55 5.448 54.552 5 54 5 L 10 5 z M 11 7 L 14 7 L 14 10 L 50 10 L 50 7 L 53 7 L 53 10 L 56 10 L 56 13 L 53 13 L 53 45 L 50 45 L 50 48 L 14 48 L 14 45 L 11 45 L 11 13 L 8 13 L 8 10 L 11 10 L 11 7 z M 11 10 L 11 13 L 14 13 L 14 10 L 11 10 z M 53 13 L 53 10 L 50 10 L 50 13 L 53 13 z M 22 19 L 22 34 L 25 34 L 25 19 L 22 19 z M 39 19 L 39 34 L 42 34 L 42 19 L 39 19 z M 8 51 L 11 51 L 11 54 L 14 54 L 14 57 L 11 57 L 11 54 L 8 54 L 8 51 z M 53 51 L 56 51 L 56 54 L 53 54 L 53 57 L 50 57 L 50 54 L 53 54 L 53 51 z"></path>
-        </svg>
+        <img class="footer-logo" src="./assets/icons/logo.svg" alt="" />
         <p>This is a slogan for the company or something. Ka-Chow!</p>
       </div>
       <div class="grid grid-cols-2">

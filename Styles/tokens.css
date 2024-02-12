@@ -30,8 +30,8 @@
   --purple: 300 100% 25%;
   --white: 0 0% 96%;
   --black: 240 25% 2%;
-  --gray: 0 0% 84%;
-  --light-gray: 0 0% 74%;
+  --gray: 0 0% 74%;
+  --light-gray: 0 0% 84%;
 
   /** Tyopography */
   --fs-100: clamp(0.75rem, 0.21vw + 0.71rem, 0.88rem);
