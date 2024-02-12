@@ -7,19 +7,21 @@ body {
     can get huge so I did max-content to restrict them to being only as big as the content needs. 
   */
   grid-template-rows: max-content auto max-content;
+  overflow-x: hidden;
 }
 
-body > * {
-  --max-width: 80rem;
-  --padding: calc(var(--size-7) * 2);
-
-  width: min(100% - var(--padding), var(--max-width));
-  margin-inline: auto;
-}
-
+/* Sets each element to relative for rendering the psuedo borders  */
 body > *,
 nav {
   position: relative;
+}
+
+.container {
+  --max-width: 80rem;
+  --padding: var(--size-8);
+
+  width: min(100% - var(--padding), var(--max-width));
+  margin-inline: auto;
 }
 
 section {

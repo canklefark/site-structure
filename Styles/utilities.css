@@ -1,5 +1,14 @@
 /** Utilities  */
 .list-none { list-style: none; }
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
 
 /** Borders */
 .border-green { border: var(--border) hsl(var(--green) / var(--transparency)); }
@@ -8,11 +17,13 @@
 .border-purple { border: var(--border) hsl(var(--purple) / var(--transparency)); }
 
 /** Background Colors */
-.bg-green { background: hsl(var(--green)); }
-.bg-red { background: hsl(var(--red)); }
-.bg-blue { background: hsl(var(--blue)); }
-.bg-purple { background: hsl(var(--purple)); }
-.bg-black { background: hsl(var(--black)); }
+.bg-green { background-color: hsl(var(--green)); }
+.bg-red { background-color: hsl(var(--red)); }
+.bg-blue { background-color: hsl(var(--blue)); }
+.bg-purple { background-color: hsl(var(--purple)); }
+.bg-black { background-color: hsl(var(--black)); }
+.bg-gray { background-color: hsl(var(--gray)); }
+.bg-light-gray { background-color: hsl(var(--light-gray)); }
 
 /** General Layout */
 .flow * + * { margin-top: var(--flow-spacer, 1em); }

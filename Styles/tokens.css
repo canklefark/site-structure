@@ -1,6 +1,9 @@
 :root {
   font-family: 'Press Start 2P', system-ui;
-  /* MISC */
+  background-color: hsl(var(--white));
+  color: hsl(var(--black));
+
+  /** MISC */
   --transparency: 0.15;
 
   /** Sizes */
@@ -25,8 +28,10 @@
   --red: 0 100% 50%;
   --blue: 240 100% 50%;
   --purple: 300 100% 25%;
-  --white: 0 0% 100%;
-  --black: 0 0% 0%;
+  --white: 0 0% 96%;
+  --black: 240 25% 2%;
+  --gray: 0 0% 84%;
+  --light-gray: 0 0% 74%;
 
   /** Tyopography */
   --fs-100: clamp(0.75rem, 0.21vw + 0.71rem, 0.88rem);
