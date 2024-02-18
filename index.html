@@ -34,7 +34,7 @@
     </header>
     <main class="border-red" data-type="labelled">
       <section class="container" id="content">
-        <div class="flow">
+        <div class="content-wrapper | flow">
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
@@ -76,64 +76,125 @@
         </div>
       </section>
 
-      <section id="gallery">
-        <div class="flex flex-column" style="--gap: 5rem">
-          <div class="container">
-            <picture>
-              <source media="(max-width: 480px)" srcset="assets/images/carnival-480.jpg" />
-              <source
-                media="(max-width: 480px)"
-                type="image/webp"
-                srcset="./assets/images/carnival-480.webp" />
-              <source type="image/webp" srcset="./assets/images/carnival-1280.webp" />
+      <section class="gallery | flex flex-column" id="gallery">
+        <div class="card-container | container flex wrap justify-center">
+          <div class="card | flex flex-column text-clr-light bg-black">
+            <div class="media-wrapper | w-full aspect-1">
               <img
-                class="border-black"
-                src="./assets/images/carnival-1280.jpg"
-                alt="A painting of an 8-bit loading screen on a public wall" />
-            </picture>
+                class="w-full h-full"
+                src="/assets/avatars/2x/Asset 1.png"
+                alt="A pixelart avatar" />
+            </div>
+            <div class="content-wrapper | flow">
+              <h2 class="text-h5">Card Title</h2>
+              <p class="text-body">This is a card description</p>
+            </div>
           </div>
-          <img
-            src="https://placehold.co/1600x400"
-            alt=""
-            srcset="
-              https://placehold.co/400x100   400w,
-              https://placehold.co/800x200   800w,
-              https://placehold.co/1300x300 1300w,
-              https://placehold.co/1600x400 1600w,
-              https://placehold.co/2000x600 1920w
-            "
-            sizes="100vw" />
+
+          <div class="card | flex flex-column text-clr-light bg-black">
+            <div class="media-wrapper | w-full aspect-1">
+              <img
+                class="w-full h-full"
+                src="/assets/avatars/2x/Asset 2.png"
+                alt="A pixelart avatar" />
+            </div>
+            <div class="flow">
+              <h2 class="text-h5">Card Title</h2>
+              <p class="text-body">This is a card description</p>
+            </div>
+          </div>
+
+          <div class="card | flex flex-column text-clr-light bg-black">
+            <div class="media-wrapper | w-full aspect-1">
+              <img
+                class="w-full h-full"
+                src="/assets/avatars/2x/Asset 3.png"
+                alt="A pixelart avatar" />
+            </div>
+            <div class="flow">
+              <h2 class="text-h5">Card Title</h2>
+              <p class="text-body">This is a card description</p>
+            </div>
+          </div>
+
+          <div class="card | flex flex-column text-clr-light bg-black">
+            <div class="media-wrapper | w-full aspect-1">
+              <img
+                class="w-full h-full"
+                src="/assets/avatars/2x/Asset 4.png"
+                alt="A pixelart avatar" />
+            </div>
+            <div class="flow">
+              <h2 class="text-h5">Card Title</h2>
+              <p class="text-body">This is a card description</p>
+            </div>
+          </div>
+
+          <div class="card | flex flex-column text-clr-light bg-black">
+            <div class="media-wrapper | w-full aspect-1">
+              <img
+                class="w-full h-full"
+                src="/assets/avatars/2x/Asset 5.png"
+                alt="A pixelart avatar" />
+            </div>
+            <div class="flow">
+              <h2 class="text-h5">Card Title</h2>
+              <p class="text-body">This is a card description</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://placehold.co/1600x400"
+          alt=""
+          srcset="
+            https://placehold.co/400x100   400w,
+            https://placehold.co/800x200   800w,
+            https://placehold.co/1300x300 1300w,
+            https://placehold.co/1600x400 1600w,
+            https://placehold.co/2000x600 1920w
+          "
+          sizes="100vw" />
+        <div class="container">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/images/carnival-480.jpg" />
+            <source
+              media="(max-width: 480px)"
+              type="image/webp"
+              srcset="./assets/images/carnival-480.webp" />
+            <source type="image/webp" srcset="./assets/images/carnival-1280.webp" />
+            <img
+              src="./assets/images/carnival-1280.jpg"
+              alt="A painting of an 8-bit loading screen on a public wall" />
+          </picture>
         </div>
       </section>
     </main>
-    <footer
-      class="flex space-between border-green"
-      style="padding-bottom: 5rem"
-      id="footer"
-      data-type="labelled">
-      <div class="flex flex-column" style="max-width: 30%">
-        <img class="footer-logo" src="./assets/icons/logo.svg" alt="" />
-        <p>This is a slogan for the company or something. Ka-Chow!</p>
-      </div>
-      <div class="grid grid-cols-2">
-        <div class="flex flex-column">
-          <p class="uppercase">List Heading</p>
-          <ul class="list-none underline">
-            <li><p>This</p></li>
-            <li><p>is</p></li>
-            <li><p>a</p></li>
-            <li><p>list</p></li>
-          </ul>
+    <footer class="border-green" style="padding-bottom: 5rem" id="footer" data-type="labelled">
+      <div class="container flex space-between">
+        <div class="flex flex-column" style="max-width: 30%">
+          <img class="footer-logo" src="./assets/icons/logo.svg" alt="" />
+          <p>This is a slogan for the company or something. Ka-Chow!</p>
         </div>
+        <div class="grid grid-cols-2">
+          <div class="flex flex-column">
+            <p class="uppercase">List Heading</p>
+            <ul class="list-none underline">
+              <li><p>This</p></li>
+              <li><p>is</p></li>
+              <li><p>a</p></li>
+              <li><p>list</p></li>
+            </ul>
+          </div>
 
-        <div class="flex flex-column">
-          <p class="uppercase">Another List Heading</p>
-          <ul class="list-none underline">
-            <li><p>This</p></li>
-            <li><p>is</p></li>
-            <li><p>a</p></li>
-            <li><p>list</p></li>
-          </ul>
+          <div class="flex flex-column">
+            <p class="uppercase">Another List Heading</p>
+            <ul class="list-none underline">
+              <li><p>This</p></li>
+              <li><p>is</p></li>
+              <li><p>a</p></li>
+              <li><p>list</p></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

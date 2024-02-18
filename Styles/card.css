@@ -1,0 +1,43 @@
+.card {
+  width: 32%;
+  padding: var(--size-4);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* I'm not sure how to get this pseudo element to 
+  swap to the left side. I tried a few things like 
+  position: absolute but I don't know what I was doing wrong  */
+
+.card h2::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: hsl(var(--white));
+  margin-bottom: 1rem;
+}
+
+.media-wrapper {
+  padding-block: var(--size-8);
+  padding-inline: calc(var(--size-8));
+}
+
+@media (width < 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    flex-direction: row;
+    gap: var(--size-8);
+    display: relative;
+  }
+
+  .media-wrapper {
+    max-width: 40%;
+    padding: var(--size-4);
+  }
+}

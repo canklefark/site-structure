@@ -5,6 +5,7 @@
 @import './typography.css';
 @import './pixel-art.css';
 @import './header.css';
+@import './card.css';
 
 [data-type='labelled']::before {
   content: '';

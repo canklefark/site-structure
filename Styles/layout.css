@@ -28,6 +28,13 @@ section {
   padding-block: var(--section-pad-block);
 }
 
+/* redifing the gap on in the style on the section causes the card 
+  flex grid to inherit the 5rem. I'm not sure why but increasing the 
+  specificty keeps it within the section only.  */
+.gallery {
+  gap: 5rem;
+}
+
 footer {
   min-height: 30vh;
   padding-block: var(--size-8);
