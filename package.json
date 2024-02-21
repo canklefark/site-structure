@@ -1,0 +1,25 @@
+{
+  "name": "site-structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nav.js",
+  "scripts": {
+    "watch:css": "postcss styles/style.css --dir public --watch",
+    "build:css": "postcss styles/style.css --dir public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}
